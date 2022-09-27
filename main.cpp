@@ -1,15 +1,15 @@
 #include <iostream>
 #include "player.h"
-#include "dice.h"
-#include "game.h"
+#include "singleplayer.h"
+#include "multiplayer.h"
 
 int main()
 {
-  Player player("Oliwia");
+  Player player1("Oliwia");
+  Player player2("Piotr");
 
-  Game *game = new Game;
-
-  game->play(player);
+  Multiplayer *game = new Multiplayer;
+  game->multiplayer(player1, player2);
 
   delete game;
 

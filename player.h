@@ -13,6 +13,10 @@ public:
   Player(std::string name);
 
   friend class Game;
+  friend class Singleplayer;
+  friend class Multiplayer;
+
+
 };
 
 #endif

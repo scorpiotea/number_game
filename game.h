@@ -5,11 +5,10 @@
 
 class Game
 {
-private:
-  std::string choice{};
-  int mode{};
+protected:
   int end_game{};
   int score{};
+  int score2{};
 
 public:
   void rules();
@@ -17,8 +16,10 @@ public:
 
   void get_player_name(Player &p);
   void get_player_number(Player &p);
-
-  void play(Player &p);
+  void player_won(Player &p);
+  void player_lost(Player &p);
+  void player_throw_out(Player &p);
+  void player2_throw_out(Player &p2);
 };
 
 #endif

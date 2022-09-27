@@ -1,6 +1,6 @@
-#include "dice.h"
 #include <iostream>
 #include <random>
+#include "dice.h"
 
 int dice()
 {
