@@ -1,5 +1,5 @@
-#ifndef DICE_H
-#define DICE_H
+#ifndef dice_h
+#define dice_h
 
 int dice();
 
