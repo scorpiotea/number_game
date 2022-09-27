@@ -23,6 +23,7 @@ void Singleplayer::singleplayer(Player &p)
   {
     score = result();
     player_throw_out(p);
+    std::this_thread::sleep_for(std::chrono::seconds(1));
 
     if (score == 7 || score == 11)
     {
