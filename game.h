@@ -19,7 +19,6 @@ public:
   void player_won(Player &p);
   void player_lost(Player &p);
   void player_throw_out(Player &p);
-  void player2_throw_out(Player &p2);
 };
 
 #endif

@@ -34,8 +34,3 @@ void Game::player_throw_out(Player &p)
 {
   std::cout << p.player_name << " threw out " << score << std::endl;
 }
-
-void Game::player2_throw_out(Player &p)
-{
-  std::cout << p.player_name << " threw out " << score2 << std::endl;
-}

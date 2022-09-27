@@ -5,8 +5,8 @@
 
 int main()
 {
-  Player player1("Oliwia");
-  Player player2("Piotr");
+  Player player1("Player 1");
+  Player player2("Player 2");
 
   Multiplayer *game = new Multiplayer;
   game->multiplayer(player1, player2);

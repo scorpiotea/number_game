@@ -15,8 +15,6 @@ public:
   friend class Game;
   friend class Singleplayer;
   friend class Multiplayer;
-
-
 };
 
 #endif

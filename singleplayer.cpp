@@ -1,6 +1,5 @@
-#include "game.h"
-#include "player.h"
 #include "singleplayer.h"
+#include "player.h"
 #include "result.h"
 
 void Singleplayer::singleplayer(Player &p)
