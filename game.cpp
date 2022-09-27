@@ -1,4 +1,6 @@
 #include <iostream>
+#include <chrono>
+#include <thread>
 #include "game.h"
 
 void Game::rules()
@@ -11,6 +13,7 @@ void Game::rules()
   std::cout << " * If you haven't got the numbers above you will play as long \n as you don't score "
             << "numbers 7 or 11 ( you lose ) or the equivalent \n of your starting number ( you win )." << std::endl
             << " " << std::endl;
+  std::this_thread::sleep_for(std::chrono::seconds(5));
 }
 
 void Game::get_player_number(Player &p)

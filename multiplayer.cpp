@@ -1,3 +1,5 @@
+#include <chrono>
+#include <thread>
 #include "multiplayer.h"
 #include "result.h"
 
@@ -9,11 +11,13 @@ void Multiplayer::player2_throw_out(Player &p)
 void Multiplayer::both_win(Player &p, Player &p2)
 {
   std::cout << "You both win ;)" << std::endl;
+  end_game = 1;
 }
 
 void Multiplayer::both_loose(Player &p, Player &p2)
 {
   std::cout << "You both loose ;)" << std::endl;
+  end_game = 1;
 }
 
 void Multiplayer::multiplayer(Player &p, Player &p2)
@@ -21,7 +25,10 @@ void Multiplayer::multiplayer(Player &p, Player &p2)
   rules();
 
   get_player_number(p);
+  std::this_thread::sleep_for(std::chrono::seconds(1));
+
   get_player_number(p2);
+  std::this_thread::sleep_for(std::chrono::seconds(1));
 
   if (p.player_number == 7 || p.player_number == 11 && p2.player_number == 7 || p2.player_number == 11)
   {
@@ -30,11 +37,15 @@ void Multiplayer::multiplayer(Player &p, Player &p2)
   if (p.player_number == 7 || p.player_number == 11)
   {
     player_won(p);
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+
     player_lost(p2);
   }
   if (p2.player_number == 7 || p2.player_number == 11)
   {
     player_won(p);
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+
     player_lost(p2);
   }
   if (p.player_number == 2 && p2.player_number == 2)
@@ -44,11 +55,14 @@ void Multiplayer::multiplayer(Player &p, Player &p2)
   if (p.player_number == 2)
   {
     player_won(p2);
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+
     player_lost(p);
   }
   if (p2.player_number == 2)
   {
     player_won(p);
+    std::this_thread::sleep_for(std::chrono::seconds(1));
     player_lost(p2);
   }
 
@@ -56,8 +70,12 @@ void Multiplayer::multiplayer(Player &p, Player &p2)
   {
     score = result();
     score2 = result();
+
     player_throw_out(p);
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+
     player2_throw_out(p2);
+    std::this_thread::sleep_for(std::chrono::seconds(1));
 
     if (p.player_number == 7 || p.player_number == 11 && p2.player_number == 7 || p2.player_number == 11)
     {
@@ -72,11 +90,15 @@ void Multiplayer::multiplayer(Player &p, Player &p2)
     if (score == 7 || score == 11)
     {
       player_won(p2);
+      std::this_thread::sleep_for(std::chrono::seconds(1));
+
       player_lost(p);
     }
     if (score2 == 7 || score2 == 11)
     {
       player_won(p2);
+      std::this_thread::sleep_for(std::chrono::seconds(1));
+
       player_lost(p);
     }
     if (end_game == 1)
@@ -90,11 +112,15 @@ void Multiplayer::multiplayer(Player &p, Player &p2)
     if (score == p.player_number)
     {
       player_won(p);
+      std::this_thread::sleep_for(std::chrono::seconds(1));
+
       player_lost(p2);
     }
     if (score2 == p2.player_number)
     {
       player_won(p);
+      std::this_thread::sleep_for(std::chrono::seconds(1));
+
       player_lost(p2);
     }
     if (end_game == 1)
