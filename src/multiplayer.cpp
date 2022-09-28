@@ -16,7 +16,7 @@ void Multiplayer::both_win(Player &p, Player &p2)
 
 void Multiplayer::both_loose(Player &p, Player &p2)
 {
-  std::cout << "You both loose ;)" << std::endl;
+  std::cout << "You both lost ;)" << std::endl;
   end_game = 1;
 }
 

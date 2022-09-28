@@ -9,8 +9,8 @@ void Game::rules()
             << " " << std::endl;
   std::cout << " * Your number is determinated in first throw." << std::endl;
   std::cout << " * You can win first try by throwning out numer 7 or 11." << std::endl;
-  std::cout << " * If you throw out 2 you win lose at the start." << std::endl;
-  std::cout << " * If you haven't got the numbers above you will play as long \n as you don't score "
+  std::cout << " * If you throw out 2 you lose at the start." << std::endl;
+  std::cout << " * If you haven't gotten the numbers above, you will play as long \n as you don't score "
             << "numbers 7 or 11 ( you lose ) or the equivalent \n of your starting number ( you win )." << std::endl
             << " " << std::endl;
   std::this_thread::sleep_for(std::chrono::seconds(5));
